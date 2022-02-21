@@ -12,6 +12,7 @@ import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.core.ProducerFactory;
 
+//ALL PRODUCER STUFF
 @Configuration
 public class KafkaProducerConfig {
 	
@@ -29,7 +30,7 @@ public class KafkaProducerConfig {
 	}
 	
 	// create Kafka Producers
-	@Bean
+	@Bean// Let you dependency inject inside below method
 	public ProducerFactory<String, String> producerFactory() { // can also be ProducerFactorty<String, someObject>
 		return new DefaultKafkaProducerFactory<>(producerConfig());		
 	}
