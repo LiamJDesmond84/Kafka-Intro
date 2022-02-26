@@ -34,8 +34,8 @@ public class KafkaConsumerConfig {
 
 	
 	// consumes Kafka Producers?
-	@Bean // Let you dependency inject inside below method
-	public ConsumerFactory<String, String> consumerFactory() { // can also be ProducerFactorty<String, someObject>
+	@Bean // Lets you dependency inject inside below method
+	public ConsumerFactory<String, String> consumerFactory() { // can also be ConsumerFactorty<String, someObject>
 		return new DefaultKafkaConsumerFactory<>(consumerConfig());		
 	}
 	
